@@ -14,6 +14,16 @@ def get_csv_data(folder_path: str) -> typing.List[DataFrame]:
     return data
 
 
+def get_csv_data_colab(folder_path: str) -> typing.List[DataFrame]:
+    data = []
+    files = listdir(folder_path)
+    for file in files:
+        if file.endswith('.csv'):
+            df = read_csv(folder_path+file)
+            data.append(df)
+    return data
+
+
 def get_data_local():
     return NotImplementedError
 
