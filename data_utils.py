@@ -1,7 +1,8 @@
 from os import listdir
 from pandas import DataFrame, read_csv
+from pandas.core.series import Series
+from numpy import ndarray
 import typing
-
 
 def get_csv_data(folder_path: str) -> typing.List[DataFrame]:
     data = []
@@ -22,3 +23,10 @@ def get_data_S3():
 
 def get_data_RDS():
     return NotImplementedError
+
+
+def diff_seq(
+    seq: typing.Union[list, ndarray, Series],
+    interval: int = 1
+) -> Series:
+    return Series([seq[i] - seq[i - interval] for i in range(interval, len(seq))])
