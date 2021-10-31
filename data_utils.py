@@ -4,6 +4,7 @@ from pandas.core.series import Series
 from numpy import ndarray
 import typing
 
+
 def get_csv_data(folder_path: str) -> typing.List[DataFrame]:
     data = []
     files_paths = listdir(folder_path)
@@ -27,6 +28,11 @@ def get_data_RDS():
 
 def diff_seq(
     seq: typing.Union[list, ndarray, Series],
-    interval: int = 1
+    interval: int = 1,
+    same_length: bool = False
 ) -> Series:
-    return Series([seq[i] - seq[i - interval] for i in range(interval, len(seq))])
+    output = [seq[i] - seq[i - interval] for i in range(interval, len(seq))]
+    if same_length:
+        for i in range(interval):
+            output.insert(0, 0)
+    return Series(output)
