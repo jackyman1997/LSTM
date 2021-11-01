@@ -139,3 +139,6 @@ dmypy.json
 # Credentials
 *creds*
 **/Credentials.*
+
+# Custom data
+**/data/
