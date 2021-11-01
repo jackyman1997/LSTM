@@ -10,7 +10,7 @@ def get_csv_data(folder_path: str) -> typing.List[DataFrame]:
     files = listdir(folder_path)
     for file in files:
         if file.endswith('.csv'):
-            df = read_csv(folder_path+file)
+            df = read_csv(folder_path+"/"+file)
             data.append(df)
     return data
 
