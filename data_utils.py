@@ -7,15 +7,6 @@ import typing
 
 def get_csv_data(folder_path: str) -> typing.List[DataFrame]:
     data = []
-    files_paths = listdir(folder_path)
-    for filename in files_paths:
-        filepath = folder_path + "/" + filename
-        data.append(read_csv(filepath))
-    return data
-
-
-def get_csv_data_colab(folder_path: str) -> typing.List[DataFrame]:
-    data = []
     files = listdir(folder_path)
     for file in files:
         if file.endswith('.csv'):
