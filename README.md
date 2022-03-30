@@ -8,4 +8,4 @@ This practise project attempts to use LSTM Autoencoder to mimic or forcast data.
 [difference of `.flatten()` and `.view(-1)` in PyTorch](https://discuss.pytorch.org/t/what-is-the-difference-of-flatten-and-view-1-in-pytorch/51790)  
 
 # Disclaimer
-This practise project shall never be used for predicting any sort of finanical figures or data, and shall never trust the outcome generated from this project. Basically, this is a practise on how to convert time-series data into pytorch-ready tensors only, the LSTM model training is not the main idea. 
+This practice project shall never be used for predicting any sort of finanical figures or data, and shall never trust the outcome generated from this project. Basically, this is a practise on how to convert time-series data into pytorch-ready tensors only, the LSTM model training is not the main idea. 
